@@ -13,7 +13,7 @@ import {
 import { EtiquetaEtapa, EtiquetaTemperatura } from "@/components/Etiquetas";
 
 const estiloDoCampo =
-  "h-10 rounded-lg border border-zinc-200 bg-white px-3 text-sm text-zinc-900 outline-none focus:border-emerald-500 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100";
+  "h-10 rounded-lg border border-zinc-200 bg-white px-3 text-sm text-zinc-900 outline-none focus:border-indigo-500 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100";
 
 export function ListaDeLeads() {
   const leads = useLeads();
@@ -85,7 +85,7 @@ export function ListaDeLeads() {
         </button>
       </div>
 
-      <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="relative overflow-x-auto rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
         <table className="w-full min-w-[860px] text-left text-sm">
           <thead className="border-b border-zinc-200 text-xs uppercase tracking-wide text-zinc-500 dark:border-zinc-800">
             <tr>

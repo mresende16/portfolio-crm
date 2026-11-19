@@ -1,4 +1,4 @@
-// Definições do que é um "lead" no Mini-CRM e dados de teste.
+// Definições do que é um "lead" no SellMind e dados de teste.
 // Na etapa 4 estes dados virão do banco de dados (Supabase).
 
 export type Etapa =

@@ -29,9 +29,9 @@ export function QuadroFunil() {
               moverLead(e.dataTransfer.getData("text/plain"), etapa.id);
               setColunaEmDestaque(null);
             }}
-            className={`flex w-72 shrink-0 flex-col gap-3 rounded-2xl border p-3 transition-colors ${
+            className={`flex w-[85%] max-w-72 shrink-0 flex-col sm:w-72 gap-3 rounded-2xl border p-3 transition-colors ${
               destacada
-                ? "border-emerald-400 bg-emerald-50 dark:bg-emerald-950/40"
+                ? "border-indigo-400 bg-indigo-50 dark:bg-indigo-950/40"
                 : "border-zinc-200 bg-zinc-100/60 dark:border-zinc-800 dark:bg-zinc-900/60"
             }`}
           >

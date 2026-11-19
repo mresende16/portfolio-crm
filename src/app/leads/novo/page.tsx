@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { FormularioNovoLead } from "@/components/FormularioNovoLead";
 
 export const metadata: Metadata = {
-  title: "Novo lead · Mini-CRM com IA",
+  title: "Novo lead · SellMind",
 };
 
 export default function PaginaNovoLead() {

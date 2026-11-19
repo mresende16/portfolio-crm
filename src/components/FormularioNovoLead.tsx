@@ -7,7 +7,7 @@ import { adicionarLead } from "@/lib/armazenamentoLeads";
 import { ETAPAS, ORIGENS, type Etapa, type Origem } from "@/lib/leads";
 
 const estiloDoCampo =
-  "h-10 w-full rounded-lg border border-zinc-200 bg-white px-3 text-sm text-zinc-900 outline-none focus:border-emerald-500 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100";
+  "h-10 w-full rounded-lg border border-zinc-200 bg-white px-3 text-sm text-zinc-900 outline-none focus:border-indigo-500 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100";
 
 const estiloDoRotulo = "flex flex-col gap-1.5 text-sm font-medium text-zinc-700 dark:text-zinc-300";
 
@@ -156,7 +156,7 @@ export function FormularioNovoLead() {
         </Link>
         <button
           type="submit"
-          className="rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-700"
+          className="rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-indigo-500"
         >
           Salvar lead
         </button>

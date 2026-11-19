@@ -4,6 +4,7 @@
 import { useSyncExternalStore } from "react";
 import { leadsDeExemplo, type Etapa, type Lead } from "@/lib/leads";
 
+// Chave mantida com o nome antigo do projeto para não perder os leads já salvos no navegador.
 const CHAVE = "mini-crm-ia:leads";
 
 let cache: Lead[] | null = null;

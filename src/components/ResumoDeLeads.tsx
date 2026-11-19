@@ -25,10 +25,10 @@ export function ResumoDeLeads() {
       {resumo.map((item) => (
         <div
           key={item.titulo}
-          className="rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950"
+          className="rounded-2xl border border-zinc-200 bg-white p-4 sm:p-5 dark:border-zinc-800 dark:bg-zinc-950"
         >
           <div className="text-sm text-zinc-500">{item.titulo}</div>
-          <div className="mt-1 text-2xl font-semibold tabular-nums text-zinc-950 dark:text-zinc-50">
+          <div className="mt-1 text-lg font-semibold tabular-nums sm:text-2xl text-zinc-950 dark:text-zinc-50">
             {item.valor}
           </div>
         </div>

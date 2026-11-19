@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mini-CRM com IA",
+  title: "SellMind · CRM com inteligência artificial",
   description:
-    "CRM simples para gestão de leads, com IA que classifica oportunidades e sugere follow-ups.",
+    "SellMind: CRM para gestão de leads com IA que classifica oportunidades e sugere follow-ups.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

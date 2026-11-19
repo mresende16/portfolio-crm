@@ -4,7 +4,7 @@ import { ListaDeLeads } from "@/components/ListaDeLeads";
 import { ResumoDeLeads } from "@/components/ResumoDeLeads";
 
 export const metadata: Metadata = {
-  title: "Leads · Mini-CRM com IA",
+  title: "Leads · SellMind",
 };
 
 export default function PaginaDeLeads() {
@@ -21,7 +21,7 @@ export default function PaginaDeLeads() {
         </div>
         <Link
           href="/leads/novo"
-          className="rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-700"
+          className="rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-indigo-500"
         >
           + Novo lead
         </Link>
