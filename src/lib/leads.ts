@@ -11,7 +11,9 @@ export type Etapa =
 
 export type Temperatura = "quente" | "morno" | "frio";
 
-export type Origem = "Indicação" | "Site" | "LinkedIn" | "Instagram" | "Evento";
+export const ORIGENS = ["Indicação", "Site", "LinkedIn", "Instagram", "Evento"] as const;
+
+export type Origem = (typeof ORIGENS)[number];
 
 export type Lead = {
   id: string;

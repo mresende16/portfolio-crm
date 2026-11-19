@@ -1,18 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { ETAPAS, formatarMoeda, type Etapa, type Lead } from "@/lib/leads";
+import { moverLead, useLeads } from "@/lib/armazenamentoLeads";
+import { ETAPAS, formatarMoeda, type Etapa } from "@/lib/leads";
 import { EtiquetaTemperatura } from "@/components/Etiquetas";
 
-export function QuadroFunil({ leadsIniciais }: { leadsIniciais: Lead[] }) {
-  const [leads, setLeads] = useState(leadsIniciais);
+export function QuadroFunil() {
+  const leads = useLeads();
   const [colunaEmDestaque, setColunaEmDestaque] = useState<Etapa | null>(null);
-
-  function moverLead(idDoLead: string, novaEtapa: Etapa) {
-    setLeads((atuais) =>
-      atuais.map((lead) => (lead.id === idDoLead ? { ...lead, etapa: novaEtapa } : lead)),
-    );
-  }
 
   return (
     <div className="flex gap-4 overflow-x-auto pb-4">

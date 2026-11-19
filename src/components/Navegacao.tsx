@@ -7,6 +7,7 @@ const links = [
   { href: "/", nome: "Início" },
   { href: "/leads", nome: "Leads" },
   { href: "/funil", nome: "Funil" },
+  { href: "/leads/novo", nome: "+ Novo lead" },
 ];
 
 export function Navegacao() {

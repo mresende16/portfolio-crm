@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { QuadroFunil } from "@/components/QuadroFunil";
-import { leadsDeExemplo } from "@/lib/leads";
 
 export const metadata: Metadata = {
   title: "Funil · Mini-CRM com IA",
@@ -18,7 +17,7 @@ export default function PaginaDoFunil() {
         </p>
       </div>
 
-      <QuadroFunil leadsIniciais={leadsDeExemplo} />
+      <QuadroFunil />
     </main>
   );
 }
