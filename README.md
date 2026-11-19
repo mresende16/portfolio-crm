@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SellMind — CRM com inteligência artificial
 
-## Getting Started
+> Saiba quais leads vão fechar e o que dizer a cada um.
 
-First, run the development server:
+O **SellMind** é um CRM para pequenos times comerciais. Ele organiza os contatos em um funil de vendas visual e, com inteligência artificial, aponta os leads mais quentes e sugere o próximo follow-up.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+🔗 **Demonstração ao vivo:** _em breve_
+
+---
+
+## ✨ Funcionalidades
+
+| Status | Funcionalidade |
+|:---:|---|
+| ✅ | **Página inicial** apresentando o produto |
+| ✅ | **Lista de leads** com busca por nome/empresa e filtros por etapa e temperatura |
+| ✅ | **Painel de resumo**: leads em aberto, valor em negociação, leads quentes e vendas fechadas |
+| ✅ | **Funil de vendas (kanban)** com arrastar e soltar entre as etapas |
+| ✅ | **Cadastro de leads** com validação de campos |
+| ✅ | **Exclusão de leads** com confirmação |
+| ✅ | **Layout responsivo**, funcionando no computador e no celular |
+| 🚧 | Banco de dados e login de usuários (Supabase) |
+| 🚧 | **IA:** classificação do lead em quente, morno ou frio, com justificativa |
+| 🚧 | **IA:** sugestão de mensagem de follow-up pronta para enviar |
+
+## 🛠️ Tecnologias
+
+- **[Next.js 16](https://nextjs.org/)** (App Router) e **React 19**
+- **TypeScript**
+- **Tailwind CSS 4**
+- **Vercel** para hospedagem
+- Em breve: **Supabase** (banco de dados e autenticação) e **API de IA** (LLM)
+
+## 🧠 Decisões técnicas
+
+- **Componentes reutilizáveis:** etiquetas de etapa e temperatura são compartilhadas entre a lista e o funil.
+- **Server e Client Components:** as páginas são renderizadas no servidor; só as partes interativas (filtros, funil, formulário) rodam no navegador.
+- **Estado compartilhado:** os leads ficam em um armazenamento único (`useSyncExternalStore` + `localStorage`), sincronizado entre as telas e as abas do navegador. É uma etapa provisória até a integração com o banco de dados.
+- **Acessibilidade:** o funil oferece, além de arrastar, um menu "Mover para…", que funciona no celular e pelo teclado.
+
+## 📁 Estrutura
+
+```
+src/
+├── app/
+│   ├── page.tsx            # Página inicial
+│   ├── leads/page.tsx      # Lista de leads + resumo
+│   ├── leads/novo/page.tsx # Cadastro de lead
+│   └── funil/page.tsx      # Funil de vendas (kanban)
+├── components/             # Componentes de interface
+└── lib/
+    ├── leads.ts            # Tipos, dados de exemplo e formatação
+    └── armazenamentoLeads.ts # Armazenamento compartilhado dos leads
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ▶️ Como rodar localmente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pré-requisito: [Node.js](https://nodejs.org/) 20 ou superior.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone <url-deste-repositório>
+cd <pasta-do-projeto>
+npm install
+npm run dev
+```
 
-## Learn More
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-To learn more about Next.js, take a look at the following resources:
+## 🗺️ Próximos passos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Integrar o **Supabase**: banco de dados e login de usuários
+2. Classificação automática de leads com **IA**
+3. Geração de **follow-ups** personalizados com IA
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido por **Marconi Resende** como projeto de portfólio.
