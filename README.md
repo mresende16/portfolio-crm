@@ -4,7 +4,7 @@
 
 O **SellMind** é um CRM para pequenos times comerciais. Ele organiza os contatos em um funil de vendas visual e, com inteligência artificial, aponta os leads mais quentes e sugere o próximo follow-up.
 
-🔗 **Demonstração ao vivo:** _em breve_
+🔗 **Demonstração ao vivo:** [sellmind-zeta.vercel.app](https://sellmind-zeta.vercel.app)
 
 ---
 
