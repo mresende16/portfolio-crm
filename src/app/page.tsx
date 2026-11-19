@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const recursos = [
   {
     icone: "📋",
@@ -36,6 +38,20 @@ export default function Home() {
             Organize seus leads e deixe a inteligência artificial apontar onde
             focar e o que dizer em cada follow-up.
           </p>
+          <div className="mt-2 flex flex-wrap gap-3">
+            <Link
+              href="/leads"
+              className="rounded-full bg-zinc-950 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200"
+            >
+              Ver leads
+            </Link>
+            <Link
+              href="/funil"
+              className="rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-900 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-900"
+            >
+              Abrir funil
+            </Link>
+          </div>
         </header>
 
         <section className="grid gap-4 sm:grid-cols-2">
